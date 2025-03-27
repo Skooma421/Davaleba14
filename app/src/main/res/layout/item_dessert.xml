@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chocolate_cake" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="140dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="@string/chocolate_cake"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove" />
+
+</LinearLayout>

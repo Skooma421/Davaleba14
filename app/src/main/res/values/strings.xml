@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Davaleba14New</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="remove">Remove</string>
+    <string name="chocolate_cake">Chocolate Cake</string>
+    <string name="add_strawberry_cheesecake">Add Strawberry Cheesecake</string>
+    <string name="add_chocolate_cake">Add Chocolate Cake</string>
+</resources>
