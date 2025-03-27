@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.davaleba14new.Dessert
@@ -43,9 +45,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
             binding.swipeRefreshLayout.isRefreshing = false
         }
 
-        lifecycleScope.launch {
-            dessertViewModel.desserts.collect { items ->
-                adapter.submitList(items)
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                dessertViewModel.desserts.collect { items ->
+                    adapter.submitList(items)
+                }
             }
         }
     }
